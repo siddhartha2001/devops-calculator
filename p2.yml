@@ -1,0 +1,9 @@
+
+---
+- name: Pull docker image from dockerHub
+  hosts: all
+  tasks:
+    - name: Pull calculator image
+      docker_image:
+        name: siddhartha2001/devops-calc
+        source: pull
