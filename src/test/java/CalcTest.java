@@ -1,3 +1,4 @@
+import java.lang.Math;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -50,7 +51,7 @@ public class CalcTest{
     public void test7()
     {
         assertEquals ("Logarithm True Positive", 0, calc.log(1), DELTA);
-        assertEquals ("Logarithm True Positive", 1, calc.log(2.7182), DELTA);
+        assertEquals ("Logarithm True Positive", 1, calc.log(Math.E), DELTA);
     }
 
     @Test
