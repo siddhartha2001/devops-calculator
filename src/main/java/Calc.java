@@ -1,7 +1,12 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 import java.lang.Math;
 public class Calc {
+    private static final Logger logger = LogManager.getLogger(Calc.class);
     public double sqrt(int x) {
+        logger.info("Square root of " + x + " "+ Math.sqrt(x));
         return Math.sqrt(x);
     }
     public double fct(int x) {
@@ -9,12 +14,15 @@ public class Calc {
         for (int i = 2; i <= Math.floor(x); i++) {
             fac = fac * i;
         }
+        logger.info("Factorial of " + x + " " + fac);
         return fac;
     }
     public double pwr(int x, int y) {
+        logger.info("Power of " + x + ", exponent " + y + Math.pow(x,y));
         return Math.pow(x, y);
     }
     public double log(double x) {
+        logger.info("log of " + x + " " + Math.log(x));
         return Math.log(x);
     }
     public void printMenu() {
