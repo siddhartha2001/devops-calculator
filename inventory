@@ -1,3 +1,2 @@
-
 [ubuntu18]
-127.0.0.1 ansible_user=siddhartha
+172.16.134.178 ansible_user=sid
