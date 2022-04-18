@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="CalcTest" time="0.646" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="CalcTest" time="0.516" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.14.1+1-Ubuntu-0ubuntu1.20.04"/>
@@ -61,12 +61,12 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="CalcTest" name="test1" time="0.636"/>
-  <testcase classname="CalcTest" name="test2" time="0.001"/>
-  <testcase classname="CalcTest" name="test3" time="0.002"/>
-  <testcase classname="CalcTest" name="test4" time="0.002"/>
-  <testcase classname="CalcTest" name="test5" time="0.002"/>
+  <testcase classname="CalcTest" name="test1" time="0.512"/>
+  <testcase classname="CalcTest" name="test2" time="0"/>
+  <testcase classname="CalcTest" name="test3" time="0.001"/>
+  <testcase classname="CalcTest" name="test4" time="0"/>
+  <testcase classname="CalcTest" name="test5" time="0.001"/>
   <testcase classname="CalcTest" name="test6" time="0.001"/>
-  <testcase classname="CalcTest" name="test7" time="0.001"/>
+  <testcase classname="CalcTest" name="test7" time="0"/>
   <testcase classname="CalcTest" name="test8" time="0.001"/>
 </testsuite>

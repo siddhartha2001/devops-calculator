@@ -6,7 +6,7 @@ import java.lang.Math;
 public class Calc {
     private static final Logger logger = LogManager.getLogger(Calc.class);
     public double sqrt(int x) {
-        logger.info("Square root of " + x + " "+ Math.sqrt(x));
+        logger.info("Square root");
         return Math.sqrt(x);
     }
     public double fct(int x) {
@@ -14,15 +14,15 @@ public class Calc {
         for (int i = 2; i <= Math.floor(x); i++) {
             fac = fac * i;
         }
-        logger.info("Factorial of " + x + " " + fac);
+        logger.info("Factorial");
         return fac;
     }
     public double pwr(int x, int y) {
-        logger.info("Power of " + x + ", exponent " + y + Math.pow(x,y));
+        logger.info("Power");
         return Math.pow(x, y);
     }
     public double log(double x) {
-        logger.info("log of " + x + " " + Math.log(x));
+        logger.info("log");
         return Math.log(x);
     }
     public void printMenu() {
