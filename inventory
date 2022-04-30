@@ -1,2 +1,2 @@
 [ubuntu18]
-172.16.134.178 ansible_user=sid
+172.16.128.77 ansible_user=sid
