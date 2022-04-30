@@ -1,0 +1,50 @@
+pipeline {
+    environment{
+        registry = "siddhartha2001/devops-calc"
+        registryCredential = '1'
+        dockerImage = ''
+    }
+    agent any
+
+    
+    stages {
+        stage("Build") {
+            steps {
+                // Get some code from a GitHub repository
+                git "https://github.com/siddhartha2001/devops-calculator.git"
+
+                // Run Maven on a Unix agent.
+                sh "mvn clean install"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+        }
+            
+        stage("Build Docker image") {
+            steps{
+                script {
+                    dockerImage = docker.build registry
+                }
+            }
+        }
+        
+        stage("Push docker image") {
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential ) {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
+        
+        stage('Ansible Deploy') {
+            steps {
+                //Ansible Deploy to remote server (managed host)
+                ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'p2.yml'
+
+            }
+        }
+    }
+}
